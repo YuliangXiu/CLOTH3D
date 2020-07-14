@@ -107,7 +107,7 @@ def dump_amass2pytroch(datasets, amass_dir, out_posepath, logger = None, rnd_see
             outfit_arr = np.zeros(len(outfit_types))
             for key in cdata['outfit'].keys():
                 outfit_arr[outfit_types.index(key)] = fabric_types.index(
-                        cdata['outfit'][key]['fabric'])
+                        cdata['outfit'][key]['fabric'])+1
 
             if len(cdata['poses'].shape) < 2: continue
             

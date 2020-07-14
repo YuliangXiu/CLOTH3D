@@ -85,11 +85,11 @@ class DataReader:
 		pc16_path = os.path.join(self.SRC, sample, garment + '.pc16')
 		V = readPC2Frame(pc16_path, frame, True)
 		# Read sample data
-		info = self.read_info(sample)		
-		if absolute:
-			# Transform to absolute
-			if len(info['trans'].shape) == 1: frame = None
-			V += info['trans'][:,frame].reshape((1,3))
+		# info = self.read_info(sample)		
+		# if absolute:
+		# 	# Transform to absolute
+		# 	if len(info['trans'].shape) == 1: frame = None
+		# 	V += info['trans'][:,frame].reshape((1,3))
 		# Apply rotation on z-axis
 		# zRot = zRotMatrix(info['zrot'])
 		# return zRot.dot(V.T).T

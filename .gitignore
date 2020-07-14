@@ -51,6 +51,17 @@ coverage.xml
 *.mo
 *.pot
 
+# Mesh related
+*.obj
+*.mtl
+*.jpg
+*.png
+*.pc2
+*.pkl
+*.pc12
+*.pc16
+*.bin
+
 # Django stuff:
 *.log
 local_settings.py
