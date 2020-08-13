@@ -205,3 +205,13 @@ def writeFaceBIN(fname, F):
 	F = F.astype(np.uint16)
 	with open(fname, 'wb') as f:
 		f.write(F.tobytes())
+
+# Display utils used on this notebook require triangulated faces
+def quads2tris(F):
+    out = []
+    for f in F:
+        if len(f) == 3: out += [f]
+        elif len(f) == 4: out += [[f[0],f[1],f[2]],
+                                [f[0],f[2],f[3]]]
+        else: print("This should not happen...")
+    return np.array(out, np.int32)

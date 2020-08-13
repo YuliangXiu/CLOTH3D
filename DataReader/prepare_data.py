@@ -37,6 +37,8 @@ from torch.utils.data import DataLoader
 import tables as pytables
 from tqdm import tqdm
 
+sys.path.append("/home/ICT2000/yxiu/Data/CLOTH3D/StarterKit/DataReader/")
+
 from smpl.smpl_np import SMPLModel
 from util import loadInfo, zRotMatrix, proj
 
